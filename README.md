@@ -18,6 +18,14 @@ Lightweight web management apps, admin panels, data dashboards, workflow automat
 
 - **Stack / 技术栈:** Cloudflare Workers + D1
 
+**Anonymized product screens / 脱敏产品画面**
+
+![AI Ledger desktop overview — synthetic data](cases/personal-ai-ledger/screenshots/01-home-desktop.jpg)
+
+![AI Ledger multi-currency detail — synthetic data](cases/personal-ai-ledger/screenshots/03-cross-currency-detail.jpg)
+
+[Explore all 8 screenshots / 查看全部8张截图](cases/personal-ai-ledger/SCREENSHOTS.md)
+
 ---
 
 ### 2. Belt & Road Study & Employment Database | 一带一路学习与就业数据库 `PRIVATE`
