@@ -37,7 +37,7 @@ export default async function handler(req, res) {
           '编号：' + id,
           '请登录私有询价后台查看完整需求：',
           'https://ai-development-portfolio-eight.vercel.app/admin.html',
-        ].join('\\n');
+        ].join('\n');
         const body = { msg_type: 'text', content: { text: notice } };
         const controller = new AbortController();
         const timeout = setTimeout(() => controller.abort(), 5000);
