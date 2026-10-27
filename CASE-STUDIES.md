@@ -1,113 +1,30 @@
 # Case Studies / 核心项目案例
 
-[← Back to README.md](README.md)
+[Back to portfolio / 返回作品集](README.md)
 
----
-
-> **Disclaimer / 免责声明:** All projects are private or personal. No real financial or health data involved. No paid-customer or commercial delivery claims. Not for production use. 所有项目均为私有或个人用途，不涉及真实财务或健康数据，不存在付费客户或商业交付声明，不用于生产环境。
-
----
+These are project case studies, not statements of paid client delivery. Public portfolio text contains no private financial records, health records or credentials. / 以下为项目案例，不代表已完成付费客户交付。公开展示内容不包含私人财务记录、健康记录或密钥。
 
 ## 1. Personal AI Ledger / AI个人记账
-
-**Problem / 问题:**
-Managing multi-currency personal expenses in a consolidated, private ledger. Need a way to record expenses in different currencies, capture them conveniently (e.g. screenshot-assisted), and produce simple summaries — without relying on public APIs or paid services.
-个人记账中需要统一管理多币种支出。需要一个方式，在不同货币下记录开支、方便地通过截图辅助记录，并生成简单汇总 — 不依赖公开API或付费服务。
-
-**Implemented Features / 实现功能:**
-- Private Cloudflare Workers D1 database for multi-currency expense entry.
-- Screenshot-assisted capture for quick input of receipts and invoices.
-- Bilingual (EN/ZH) interface for personal record keeping.
-- Prepared anonymized case data for demonstration purposes only.
-- Potential use for small-team expense logs.
-- 私有 Cloudflare Workers D1 数据库，支持多币种支出录入。
-- 通过截图辅助快速录入收据和发票。
-- 中英双语界面，适用于个人记账。
-- 使用脱敏准备案例数据，仅用于演示。
-- 潜在用途：小型团队支出记录。
-
-**Reuse & Current Status / 复用与当前状态:**
-Code structure is modular for potential reuse. **Not mentioned:** realtime exchange rates, Hono, FastAPI, or any claim of production readiness. This is a personal/private tool.
-代码结构模块化，具备潜在复用性。**未使用：**实时汇率、Hono、FastAPI，无生产就绪声明。此工具为个人/私有用途。
-
----
+**Problem / 需求:** Efficient tracking of everyday spending in multiple currencies. / 高效记录多币种日常开支。
+**Implemented / 已实现:** Cloudflare Workers and D1 expense tracking, currency handling and screenshot-assisted entry as documented in anonymized project review. / 基于 Cloudflare Workers 与 D1 的收支记录、币种处理及截图辅助录入，功能依据已脱敏项目审查。
+**Reusable scenarios / 适配方向:** Small-team expense recording and data-entry dashboards, subject to scope review. / 小团队费用记录与数据录入看板，须按项目范围评估。
+**Access / 状态:** Private source; anonymized illustrations not yet published. / 私有源码；脱敏展示素材尚未公开。
 
 ## 2. Belt & Road Study and Employment Database / 一带一路留学就业数据库
+**Problem / 需求:** Consolidate fragmented study, university and major information. / 汇总分散的留学、院校与专业信息。
+**Implemented / 已实现:** Next.js, React, TypeScript, Supabase; country/university/major listings, fee calculator, CMS and SEO-related configuration per source documentation. / Next.js、React、TypeScript、Supabase，含国家、院校、专业信息、费用计算、内容管理与SEO相关配置，依据仓库文档。
+**Reusable scenarios / 适配方向:** Education directories and searchable information portals. / 教育资料库、信息查询平台。
+**Access / 状态:** Private repository; live deployment and information accuracy need independent validation. / 私有仓库；线上状态及信息准确性仍需独立核验。
 
-**Problem / 问题:**
-Tracking country, university, major records for Belt & Road region students and graduates. Need a fees calculator and a CMS/SEO-friendly way to publish information, without relying on centralized government sources.
-追踪一带一路地区学生和毕业生的国家、大学、专业记录。需要一个费用计算器和一个对CMS/SEO友好的信息发布方式，不依赖中央政府来源。
+## 3. Family Health Management Web Platform / 家庭健康管理平台
+**Source / 代码:** https://github.com/daviddingn-sys/family-companion-platform
+**Problem / 需求:** Shared records for different family members. / 多家庭成员的健康记录协作管理。
+**Implemented / 已实现:** Next.js, Supabase, Drizzle; family/member permissions, BP record charts, medication logs, reminder records, rule-based periodic reports. / Next.js、Supabase、Drizzle；家庭与成员权限、血压趋势、用药记录、提醒事项记录、规则化周期报告。
+**Reusable scenarios / 适配方向:** Multi-user record management and dashboard workflows. / 多用户档案与数据看板。
+**Boundary / 边界:** No scheduled reminder push or medical diagnosis; public source does not imply publicly hosted demo. / 不含定时推送及医学诊断；源码公开不代表线上演示可访问。
 
-**Implemented Features / 实现功能:**
-- Private Next.js + React + TypeScript + Supabase stack.
-- Country, university, and major record management.
-- Tuition and living fees calculator.
-- CMS and SEO based on documented code.
-- Independent live deployment.
-- 私有 Next.js + React + TypeScript + Supabase 架构。
-- 国家、大学、专业记录管理。
-- 学费和生活费计算器。
-- 基于文档代码的CMS和SEO功能。
-- 独立部署上线。
-
-**Reuse & Current Status / 复用与当前状态:**
-The stack is reusable for similar educational databases. **Accuracy of deployed data has not been verified.** This is a personal project with a live deployment for learning purposes only.
-此架构可复用至类似教育数据库。**已部署数据的准确性未经核实。** 此项目为个人学习用途，仅作独立部署演示。
-
----
-
-## 3. Family Health Management / 家庭健康管理
-
-**Problem / 问题:**
-Managing health records for family members, including blood pressure tracking, medication logs, and manual reminders — in a shared family space. Not a medical device or diagnosis tool.
-管理家庭成员的健康记录，包括血压追踪、用药记录和手动提醒 — 在一个共享的家庭空间中。不是医疗设备或诊断工具。
-
-**Source / 来源:**
-https://github.com/daviddingn-sys/family-companion-platform
-
-**Implemented Features / 实现功能:**
-- Public repository, Next.js + Supabase + Drizzle stack.
-- Family roles (admin, member).
-- Member health records and profile management.
-- Blood pressure trend charts.
-- Medication logs and manual reminder records.
-- Rule-based health reports.
-- 公开仓库，Next.js + Supabase + Drizzle 架构。
-- 家庭角色管理（管理员、成员）。
-- 成员健康档案与资料管理。
-- 血压趋势图表。
-- 用药记录与手动提醒记录。
-- 基于规则的健康报告。
-
-**Reuse & Current Status / 复用与当前状态:**
-The codebase is public and can be forked. **Not features:** push notifications, AI-based medical diagnosis, or automated alerts. Not a medical device.
-代码库为公开可复用。**无功能：**推送通知、AI医疗诊断或自动警报。非医疗设备。
-
----
-
-## 4. BP Web Monitor / 血压记录Web
-
-**Problem / 问题:**
-A lightweight, private web tool for tracking blood pressure trends locally. Need trend charts, import/export capability, and optional OCR configuration for reading device measurements.
-一个轻量、私有的血压追踪Web工具。需要趋势图表、导入/导出功能，以及可选的OCR配置用于读取设备测量数据。
-
-**Implemented Features / 实现功能:**
-- Private Next.js + TypeScript + Supabase + PostgreSQL stack.
-- Blood pressure trend charts with visualization.
-- Data import and export (CSV/JSON).
-- Optional OCR configuration for reading BP device readings.
-- 私有 Next.js + TypeScript + Supabase + PostgreSQL 架构。
-- 血压趋势图表可视化。
-- 数据导入/导出（CSV/JSON）。
-- 可选OCR配置读取血压计数据。
-
-**Reuse & Current Status / 复用与当前状态:**
-Private tool, code available on request. **Not a medical device.** Tracking trends only; no diagnosis or clinical claims.
-私有工具，代码可索取。**非医疗设备。** 仅作趋势追踪，无诊断或临床声明。
-
----
-
-> **Final Note / 最后说明:**
-> - No real financial or health data is used in any project. 所有项目均未使用真实财务或健康数据。
-> - No paid-customer or commercial delivery claims. 不存在付费客户或商业交付声明。
-> - No automatic production-ready claims. Do not suggest this is production-ready. 无自动生产就绪声明，不建议视为生产就绪。
+## 4. BP Web Monitor / 血压记录Web工具
+**Problem / 需求:** Track blood-pressure measurements and visualize trends. / 记录血压测量结果并观察趋势。
+**Implemented / 已实现:** Next.js, TypeScript, Supabase/PostgreSQL; record management, charts, spreadsheet import/export, optional photo/OCR flow based on repository documents. / Next.js、TypeScript、Supabase/PostgreSQL；记录管理、图表、电子表格导入导出、可选图片/OCR流程，依据仓库文档。
+**Reusable scenarios / 适配方向:** Custom data capture and reporting dashboards, not a medical device. / 定制数据采集与报告看板，非医疗设备。
+**Access / 状态:** Private repository, independent production acceptance not established. / 私有仓库，尚未完成独立生产验收。
