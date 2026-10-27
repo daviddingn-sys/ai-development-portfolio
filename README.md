@@ -50,6 +50,8 @@ Lightweight web management apps, admin panels, data dashboards, workflow automat
 
 - **Stack / 技术栈:** Next.js, Supabase, Drizzle
 
+[Family health case study / 家庭健康案例详情](cases/family-health/README.md)
+
 ---
 
 ### 4. BP Web Monitor | 血压监测Web端 `PRIVATE`
