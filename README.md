@@ -52,7 +52,9 @@ Lightweight web management apps, admin panels, data dashboards, workflow automat
 
 - **Stack / 技术栈:** Next.js, Supabase, Drizzle
 
-[Family health case study / 家庭健康案例详情](cases/family-health/README.md)
+[Family health case with synthetic UI preview / 家庭健康隔离演示案例](cases/family-health/README.md)
+
+![Family dashboard layout, isolated synthetic-data preview](cases/family-health/synthetic-family-preview.png)
 
 ---
 

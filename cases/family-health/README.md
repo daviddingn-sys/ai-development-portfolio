@@ -19,6 +19,14 @@ EN: A multi-member family records platform for shared health-related information
 - Rule-based weekly and monthly reporting / 规则驱动的周报及月报
 - Spreadsheet import/export and record-management workflows / 表格导入导出及记录管理流程
 
+## Isolated interface preview / 隔离界面预览
+
+**EN:** On 27 October 2026, a locally added portfolio-only route in a clone of the project rendered successfully in Next.js (HTTP 200). It reuses the project's Card components and styling, with entirely fictional family counts, member names, BP values and reminders. This preview route has **not** been committed to the original source repository. It does **not** demonstrate working Supabase authentication, database queries, saving records or production readiness.
+
+**中文：** 2026年10月27日，在项目本地副本中增加仅供作品集演示的页面，复用原有Card组件和样式，实际通过Next.js渲染成功（HTTP 200）。家庭数量、成员、血压数值和提醒均为虚构数据。**演示路由未提交至原项目仓库**，不代表Supabase认证、数据库查询、数据写入或生产环境已验收。
+
+![Family dashboard component preview with synthetic data / 家庭健康工作台组件与合成数据预览](synthetic-family-preview.png)
+
 ## Business application / 可参考的客户场景
 
 EN: A technical reference for permission-based member portals, record-management software, responsive dashboards and reporting systems. A commercial deployment requires its own information-security and acceptance review.
