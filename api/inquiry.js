@@ -51,6 +51,8 @@ export default async function handler(req, res) {
           const result = await response.json().catch(() => ({}));
           if (!response.ok || (result.code !== undefined && result.code !== 0)) {
             console.error('Feishu notification rejected', response.status, result.code);
+          } else {
+            console.info('Feishu notification accepted', id, response.status, result.code ?? result.StatusCode ?? 'unknown');
           }
         } finally { clearTimeout(timeout); }
       } catch (err) { console.error('Feishu notification failed', err?.message || err); }
