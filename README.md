@@ -1,123 +1,89 @@
-# AI-Assisted Web & Automation Development | AI辅助Web与自动化开发
+# AI-Assisted Web & Automation Development
+### AI辅助定制Web应用与自动化开发
 
-Lightweight web management apps, admin panels, data dashboards, workflow automation, educational platforms, and WeChat mini programs — all custom scope, subject to review. / 轻量级Web管理应用、后台面板、数据看板、工作流自动化、教育平台与微信小程序——全部定制范围，视评估而定。
+**Turn a workflow into a usable application. / 把业务流程做成真正能使用的软件。**
 
----
+Lightweight management systems · Data dashboards · Information portals · Import/export workflows · Automation  
+轻量级业务管理系统 · 数据看板 · 信息查询平台 · 表格导入导出 · 工作流自动化
 
-**Featured case studies / 四个核心项目详细案例：** [Read bilingual case studies / 查看中英文案例详情](CASE-STUDIES.md)
+**[Discuss a project / 提交开发需求与询价](https://github.com/daviddingn-sys/ai-development-portfolio/issues/new)** · [View detailed case studies / 查看核心案例详情](CASE-STUDIES.md)
 
----
-
-## Core Projects | 核心项目
-
-### 1. Personal AI Ledger | 个人AI账本 `PRIVATE`
-
-**English:** Personal finance tracking with intelligent automation. Features Cloudflare Workers + D1 multi-currency expense recording, screenshot-assisted entry for faster data capture. Anonymized screenshots and a bilingual technical case study are now available: [View Personal AI Ledger case / 查看AI记账图文案例](cases/personal-ai-ledger/README.md).
-
-**中文：** 个人财务管理工具，结合智能自动化。采用 Cloudflare Workers + D1 实现多币种费用记录，支持截图辅助录入以提升数据录入效率。现已公开[脱敏的8张产品截图及中英文技术案例](cases/personal-ai-ledger/README.md)，原始源码与个人财务数据继续保密。
-
-- **Stack / 技术栈:** Cloudflare Workers + D1
-
-**Anonymized product screens / 脱敏产品画面**
-
-![AI Ledger desktop overview — synthetic data](cases/personal-ai-ledger/screenshots/01-home-desktop.jpg)
-
-![AI Ledger multi-currency detail — synthetic data](cases/personal-ai-ledger/screenshots/03-cross-currency-detail.jpg)
-
-[Explore all 8 screenshots / 查看全部8张截图](cases/personal-ai-ledger/SCREENSHOTS.md)
+> GitHub Issues requires a GitHub account. / 通过 GitHub Issues 联系需要登录 GitHub 账号。请勿在公开 Issue 中提供密码、个人记录或机密资料。
 
 ---
 
-### 2. Belt & Road Study & Employment Database | 一带一路学习与就业数据库 `PRIVATE`
+## What I can build / 可承接的定制方向
 
-**English:** Comprehensive database for studying and finding employment along the Belt and Road initiative. Built with Next.js/React/TypeScript/Supabase, includes country-university-major data explorer, tuition fee calculator, CMS for content management, and SEO optimization.
+| Business need / 业务需求 | Example deliverable / 可交付形式 |
+|---|---|
+| Organize scattered records / 整理分散记录 | Web management app, searchable database / Web管理后台、信息检索库 |
+| Turn spreadsheets into workflows / 将表格业务系统化 | Data entry, import/export, review flows / 数据录入、导入导出、审核流程 |
+| See trends and metrics / 查看趋势与指标 | Dashboard, charts, periodic reports / 数据看板、图表及周期报表 |
+| Publish structured information / 发布结构化信息 | Education portal, content management / 教育信息门户、内容管理系统 |
+| Reduce repetitive work / 减少重复操作 | Workflow integrations and automation / 工作流集成及自动化 |
 
-**中文：** 服务"一带一路"倡议的学习与就业综合数据库。基于 Next.js/React/TypeScript/Supabase 构建，涵盖国家-院校-专业数据检索、学费计算工具、内容管理系统（CMS）及搜索引擎优化（SEO）。
+*Scope, security, integration and acceptance criteria are agreed per project. / 具体功能、安全要求、系统集成与验收标准按项目单独确认。*
 
-- **Stack / 技术栈:** Next.js, React, TypeScript, Supabase
+## Featured work / 四个重点案例
 
-[Case study and three live screenshots / 中英文案例及三张真实截图](cases/belt-road-study/README.md) — page access verified 27 October 2026; backend writes not revalidated / 页面可访问，数据库写入未复核。
+### 01 · Personal AI Ledger / AI个人记账
+**Cloudflare Workers · D1 · Responsive Web**
 
-![Belt & Road educational database homepage, live browser capture](cases/belt-road-study/homepage-capture.png)
+Multi-currency entry, screenshot-assisted capture, editable review and reporting. / 多币种记录、截图辅助录入、人工核对与统计分析。
 
----
+[**Explore the illustrated case / 查看8张脱敏截图与完整案例**](cases/personal-ai-ledger/README.md)
 
-### 3. Family Health Management Web Platform | 家庭健康管理Web平台 `PUBLIC CODE`
+![Personal AI Ledger desktop overview with synthetic transactions](cases/personal-ai-ledger/screenshots/01-home-desktop.jpg)
 
-**Link:** https://github.com/daviddingn-sys/family-companion-platform
+### 02 · Belt & Road Study & Employment Database / 一带一路留学就业数据库
+**Next.js · TypeScript · Supabase**
 
-**English:** Open-source family health management platform. Supports multiple family roles, blood pressure record tracking with trend charts, medication logging and reminder system, and weekly/monthly rule-based reports. **Not for medical advice.**
+Searchable country/university/major information, tuition budget references and content management. / 国家、院校、专业查询，留学费用测算及内容管理。
 
-**中文：** 开源家庭健康管理平台。支持多家庭成员角色管理，血压记录趋势图表追踪，用药记录与提醒系统，以及基于规则的周报与月报。**不用于医疗建议。**
+[**Explore the case and live interface captures / 查看案例及3张真实网页截图**](cases/belt-road-study/README.md)
 
-- **Stack / 技术栈:** Next.js, Supabase, Drizzle
+![Belt Road education information website publicly accessible page captured in Chrome](cases/belt-road-study/homepage-capture.png)
 
-[Family health case with synthetic UI preview / 家庭健康隔离演示案例](cases/family-health/README.md)
+### 03 · Family Health Management / 家庭健康管理平台
+**Next.js · Supabase · Drizzle**
 
-![Family dashboard layout, isolated synthetic-data preview](cases/family-health/synthetic-family-preview.png)
+Family roles, records, trend charts and rule-based reports. / 家庭与成员权限、记录管理、趋势图表及规则化报告。
 
----
+[**Read case / 查看案例**](cases/family-health/README.md) · [Public code / 公开源码](https://github.com/daviddingn-sys/family-companion-platform)
 
-### 4. BP Web Monitor | 血压监测Web端 `PRIVATE`
+![Family platform component preview with entirely synthetic values](cases/family-health/synthetic-family-preview.png)
 
-**English:** Blood pressure monitoring web application. Features blood pressure record management, interactive charts, spreadsheet import/export for batch data operations, and photo/OCR integration workflows (subject to configuration).
+*Isolated UI preview assembled from the project's components with fictional records; no backend verification implied. / 使用原项目组件及虚构数据的隔离界面预览，不代表后台功能已验收。*
 
-**中文：** 血压监测Web应用。支持血压记录管理、交互式图表展示、电子表格导入导出以实现批量数据操作，以及照片/OCR识别工作流（视配置而定）。
+### 04 · Blood Pressure Web Monitor / 血压记录Web工具
+**Next.js · TypeScript · Supabase/PostgreSQL**
 
-- **Stack / 技术栈:** Next.js, React, TypeScript, PostgreSQL, Supabase
+Record entry, monthly summaries, charts and data import/export. / 测量录入、月度概览、趋势图表及数据导入导出。
 
-[Case study / 中英文案例详情](cases/bp-monitor/README.md) — no private medical screenshots / 未公开个人健康截图。
+[**Read case / 查看案例**](cases/bp-monitor/README.md)
 
----
+![Blood-pressure overview running locally with mock API response](cases/bp-monitor/synthetic-overview.png)
 
-## Supporting Projects | 辅助项目
+*Actual front-end running with synthetic API data, not a clinical product or production database demonstration. / 真实前端使用模拟接口数据，不属于医疗产品或正式数据库演示。*
 
-### 5. WeChat BP Mini Program | 微信血压小程序 `PRIVATE`
+## Other projects / 其他作品
 
-**English:** Native WeChat mini program for blood pressure record and review workflow. Built with native JavaScript and CloudBase. **Note:** Development stage only; no production deployment claimed.
+| Project / 项目 | Focus / 能力方向 | Availability / 代码 |
+|---|---|---|
+| WeChat BP Mini Program / 微信血压小程序 | Native JS, CloudBase, records workflow / 微信原生开发、云函数、记录流程 | Private / 私有 |
+| Germany Dual System Site / 德国双元制教育网站 | Next.js information website / 教育资讯网站 | Private / 私有 |
+| [Edu-Finder](https://github.com/daviddingn-sys/Edu-Finder) / 教育搜索工具 | Python Flask, Google Custom Search API | Public code / 公开源码 |
 
-**中文：** 基于原生微信原生 JavaScript 与 CloudBase 开发的血压记录与审核流程小程序。**注意：** 目前仅为开发阶段，未声称生产环境部署。
+*Dual-education is a planning/documentation repository, not a released application. / Dual-education为规划资料仓库，非独立发布应用。*
 
-- **Stack / 技术栈:** Native WeChat JS, CloudBase
+## How we work / 合作流程
 
----
+**1. Describe the goal / 提需求** — Summarize the workflow, target users, key features and existing tools. / 描述业务流程、使用者、核心功能和现有工具。
 
-### 6. Germany Dual System Website | 德国双元制教育网站 `PRIVATE`
+**2. Confirm scope / 定范围** — Discuss a prototype, architecture, integrations, schedule and acceptance criteria before a quote. / 明确原型、技术路径、集成范围、进度与验收，再确认报价。
 
-**English:** Informational website covering six vocational education fields under Germany's dual-system model. Built with Next.js to present structured educational content.
+**3. Build and review / 开发与验收** — Review milestones using test data before connecting live systems. / 先用测试数据分阶段验收，再考虑接入正式系统。
 
-**中文：** 介绍德国双元制教育模式下六个职业教育领域的信息网站。基于 Next.js 构建，提供结构化的教育内容展示。
+### [Start a project discussion / 提交需求与询价](https://github.com/daviddingn-sys/ai-development-portfolio/issues/new)
 
-- **Stack / 技术栈:** Next.js
-
----
-
-### 7. Edu-Finder | 教育搜索工具 `PUBLIC CODE`
-
-**Link:** https://github.com/daviddingn-sys/Edu-Finder
-
-**English:** Minimal educational search tool built with Python Flask, leveraging Google Custom Search API for targeted information retrieval.
-
-**中文：** 基于 Python Flask 的轻量级教育搜索工具，利用 Google 自定义搜索 API 进行定向信息检索。
-
-- **Stack / 技术栈:** Python, Flask, Google Custom Search API
-
----
-
-### 8. Dual-Education Planning Documents | 双元制教育规划文档
-
-**English:** Planning documents for dual-education initiatives. This is a separate note and not an application or software product.
-
-**中文：** 双元制教育规划文档。此为独立说明，并非应用或软件产品。
-
----
-
-## Contact / 联系方式
-
-For service inquiries or quote requests, please open a new issue via GitHub Issues: https://github.com/daviddingn-sys/ai-development-portfolio/issues/new
-
-*(GitHub sign-in required. No private-source copying. No false email or unrelated claims.)*
-
-如需服务咨询或报价，请通过 GitHub Issues 提交：https://github.com/daviddingn-sys/ai-development-portfolio/issues/new
-
-（需GitHub登录。不复制私有源码，不含虚假邮箱或不相关声明。）
+**Project evidence and privacy / 案例真实性与隐私：** This portfolio displays personal AI-assisted development work and does not imply paid client deliveries, active demos for every project or production-ready regulated systems. Screenshots are either anonymized application captures, public page captures or clearly labeled synthetic UI previews. Private source, financial records, health records and credentials are not published. / 本作品集展示个人AI辅助开发项目，不声称已完成付费客户交付，也不将所有页面包装成可用在线演示。截图区分脱敏真实应用、公开网页和合成数据预览；不公开私人源码、财务记录、健康信息或密钥。
