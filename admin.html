@@ -12,7 +12,7 @@ document.getElementById('load').onclick=async()=>{
  for(const rec of data.records) {
  const div=document.createElement('div');div.className='record';
  for(const [label,v] of Object.entries({'Reference / 编号':rec.id,'Date / 时间':rec.receivedAt,'Name / 姓名':rec.name,'Email / 邮箱':rec.email,'Project / 类型':rec.projectType,'Description / 需求':rec.description,'Budget / 预算':rec.budget,'Timeline / 时间':rec.timeline})){const p=document.createElement('p');const strong=document.createElement('strong');strong.textContent=label+': ';p.appendChild(strong);p.appendChild(document.createTextNode(String(v||'')));div.appendChild(p)}
- wrap.appendChild(div)}
+ const remove=document.createElement('button');remove.type='button';remove.textContent='Delete this record / 删除该记录';remove.style.background='#9b2937';remove.onclick=async()=>{if(!confirm('Permanently delete this record? / 确定永久删除该条记录？'))return;remove.disabled=true;try{const d=await fetch('/api/inquiries?id='+encodeURIComponent(rec.id),{method:'DELETE',headers:{Authorization:'Bearer '+token}});if(!d.ok)throw Error('Deletion failed / 删除失败');div.remove();status.textContent='Record deleted / 已删除记录：'+rec.id;}catch(e){status.textContent=e.message;remove.disabled=false}};div.appendChild(remove);wrap.appendChild(div)}
  }catch(e){status.textContent='Unable to load / 无法读取：'+e.message}
 };
 </script></body></html>
