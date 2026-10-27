@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Private Inquiry Review</title><style>body{font:15px system-ui;background:#f3f6fb;margin:0;padding:25px;color:#15283e}.wrap{max-width:940px;margin:auto}.card{background:white;border:1px solid #dde3ec;padding:22px;border-radius:13px;margin-bottom:18px}input{width:100%;max-width:570px;padding:12px;border:1px solid #abbaca;border-radius:8px}button{padding:12px 18px;background:#1955a5;color:white;border:0;border-radius:8px;cursor:pointer}p{line-height:1.5;color:#5d6c7d}.record{border-top:1px solid #e2e8f0;padding-top:15px;margin-top:15px}.record p{white-space:pre-wrap}#status{margin-top:16px}</style></head><body><div class="wrap"><div class="card"><h1>Private inquiries / 私有询价记录</h1><p>This page requires the administrator token stored on your own Windows device. Do not share it or enter it on other sites. The token is not saved by this page.</p><label>Admin token / 管理密钥</label><p><input type="password" id="token" autocomplete="off" placeholder="Paste your administrator token"></p><button id="load">Load private inquiries / 查看线索</button><div id="status" role="status"></div></div><div id="list" class="card" hidden></div></div><script>
+document.getElementById('load').onclick=async()=>{
+ const token=document.getElementById('token').value.trim(),status=document.getElementById('status'),wrap=document.getElementById('list');
+ if(!token){status.textContent='Enter token / 请输入密钥';return}
+ status.textContent='Loading / 正在加载…';wrap.replaceChildren();wrap.hidden=true;
+ try{
+ const resp=await fetch('/api/inquiries',{headers:{Authorization:'Bearer '+token},cache:'no-store'});
+ const data=await resp.json();if(!resp.ok||!data.ok)throw Error(data.error||'Request failed');
+ document.getElementById('token').value='';
+ status.textContent='Loaded '+data.count+' records'+(data.hasMore?' (more records exist)':'')+' / 已加载 '+data.count+' 条';
+ wrap.hidden=false;const h=document.createElement('h2');h.textContent='Inquiries / 询价记录';wrap.appendChild(h);
+ for(const rec of data.records) {
+ const div=document.createElement('div');div.className='record';
+ for(const [label,v] of Object.entries({'Reference / 编号':rec.id,'Date / 时间':rec.receivedAt,'Name / 姓名':rec.name,'Email / 邮箱':rec.email,'Project / 类型':rec.projectType,'Description / 需求':rec.description,'Budget / 预算':rec.budget,'Timeline / 时间':rec.timeline})){const p=document.createElement('p');const strong=document.createElement('strong');strong.textContent=label+': ';p.appendChild(strong);p.appendChild(document.createTextNode(String(v||'')));div.appendChild(p)}
+ wrap.appendChild(div)}
+ }catch(e){status.textContent='Unable to load / 无法读取：'+e.message}
+};
+</script></body></html>
