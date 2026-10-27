@@ -16,6 +16,14 @@ EN: A web application for organizing blood-pressure readings and viewing trends 
 - Spreadsheet import and export workflows / 电子表格导入导出流程
 - Image-assisted or OCR-related integration subject to configuration / 图片辅助和OCR相关模块依赖具体配置
 
+## Isolated interface demo / 隔离演示截图
+
+The following image is a screenshot of the **actual Next.js overview interface running locally** on 27 October 2026. Values (119/78, 4/31 and other totals) are **synthetic fixtures injected through Playwright request interception**, with a fictional test phone number. This does **not** demonstrate a working production database, image OCR accuracy or successful persistence of BP readings.
+
+以下图片为2026年10月27日实际启动的Next.js概览页面。显示的119/78、4/31等数字均通过Playwright拦截测试接口注入，用户为虚构测试身份。**该截图不能证明生产数据库、OCR识别率或记录持久化已经验收。**
+
+![BP Monitor real front-end running with synthetic data / 血压Web真实前端与合成测试数据](synthetic-overview.png)
+
 ## Potential reuse / 可迁移场景
 
 EN: Custom data-entry systems, trend dashboards and exportable management reports. A new deployment needs validation of permissions, data protection and integrations.
