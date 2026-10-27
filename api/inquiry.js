@@ -24,20 +24,36 @@ export default async function handler(req, res) {
     await put('inquiries/' + record.receivedAt.substring(0, 10) + '/' + id + '.json', JSON.stringify(record), { access: 'private', contentType: 'application/json', addRandomSuffix: false });
     // Optional server-side notification, kept separate from the reliable storage write.
     // The webhook must belong to this portfolio, not to an unrelated business system.
-    if (process.env.INQUIRY_NOTIFICATION_URL && process.env.INQUIRY_NOTIFICATION_TOKEN) {
+    if (process.env.PORTFOLIO_FEISHU_WEBHOOK_URL) {
       try {
-        const control = new AbortController();
-        const timeout = setTimeout(() => control.abort(), 4000);
+        const url = new URL(process.env.PORTFOLIO_FEISHU_WEBHOOK_URL);
+        if (url.protocol !== 'https:' || url.hostname !== 'open.feishu.cn' || !url.pathname.startsWith('/open-apis/bot/v2/hook/')) {
+          throw new Error('Invalid Feishu bot webhook configuration');
+        }
+        const notice = [
+          '【个人作品集 · 新项目询价】',
+          '类型：' + record.projectType,
+          '时间：' + record.receivedAt,
+          '编号：' + id,
+          '请登录私有询价后台查看完整需求：',
+          'https://ai-development-portfolio-eight.vercel.app/admin.html',
+        ].join('\\n');
+        const body = { msg_type: 'text', content: { text: notice } };
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 5000);
         try {
-          const notify = await fetch(process.env.INQUIRY_NOTIFICATION_URL, {
+          const response = await fetch(url.toString(), {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + process.env.INQUIRY_NOTIFICATION_TOKEN },
-            body: JSON.stringify({ event: 'new_portfolio_inquiry', reference: id, receivedAt: record.receivedAt, projectType: record.projectType }),
-            signal: control.signal,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+            signal: controller.signal,
           });
-          if (!notify.ok) console.error('Inquiry notification rejected', notify.status);
+          const result = await response.json().catch(() => ({}));
+          if (!response.ok || (result.code !== undefined && result.code !== 0)) {
+            console.error('Feishu notification rejected', response.status, result.code);
+          }
         } finally { clearTimeout(timeout); }
-      } catch (err) { console.error('Inquiry notification failed', err?.message || err); }
+      } catch (err) { console.error('Feishu notification failed', err?.message || err); }
     }
     return res.status(201).json({ ok: true, reference: id });
   } catch (error) {
