@@ -4,6 +4,10 @@ Lightweight web management apps, admin panels, data dashboards, workflow automat
 
 ---
 
+**Featured case studies / 四个核心项目详细案例：** [Read bilingual case studies / 查看中英文案例详情](CASE-STUDIES.md)
+
+---
+
 ## Core Projects | 核心项目
 
 ### 1. Personal AI Ledger | 个人AI账本 `PRIVATE`
