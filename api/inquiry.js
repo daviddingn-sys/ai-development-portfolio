@@ -22,6 +22,23 @@ export default async function handler(req, res) {
   const record = { id, receivedAt: new Date().toISOString(), name, email, projectType, description, timeline, budget, source: 'portfolio-web' };
   try {
     await put('inquiries/' + record.receivedAt.substring(0, 10) + '/' + id + '.json', JSON.stringify(record), { access: 'private', contentType: 'application/json', addRandomSuffix: false });
+    // Optional server-side notification, kept separate from the reliable storage write.
+    // The webhook must belong to this portfolio, not to an unrelated business system.
+    if (process.env.INQUIRY_NOTIFICATION_URL && process.env.INQUIRY_NOTIFICATION_TOKEN) {
+      try {
+        const control = new AbortController();
+        const timeout = setTimeout(() => control.abort(), 4000);
+        try {
+          const notify = await fetch(process.env.INQUIRY_NOTIFICATION_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + process.env.INQUIRY_NOTIFICATION_TOKEN },
+            body: JSON.stringify({ event: 'new_portfolio_inquiry', reference: id, receivedAt: record.receivedAt, projectType: record.projectType }),
+            signal: control.signal,
+          });
+          if (!notify.ok) console.error('Inquiry notification rejected', notify.status);
+        } finally { clearTimeout(timeout); }
+      } catch (err) { console.error('Inquiry notification failed', err?.message || err); }
+    }
     return res.status(201).json({ ok: true, reference: id });
   } catch (error) {
     console.error('Unable to persist inquiry', error?.message || error);
