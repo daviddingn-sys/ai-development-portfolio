@@ -36,7 +36,9 @@ Lightweight web management apps, admin panels, data dashboards, workflow automat
 
 - **Stack / 技术栈:** Next.js, React, TypeScript, Supabase
 
-[Case study / 中英文案例详情](cases/belt-road-study/README.md) — includes verification boundaries / 含上线及数据核验边界。
+[Case study and three live screenshots / 中英文案例及三张真实截图](cases/belt-road-study/README.md) — page access verified 27 October 2026; backend writes not revalidated / 页面可访问，数据库写入未复核。
+
+![Belt & Road educational database homepage, live browser capture](cases/belt-road-study/homepage-capture.png)
 
 ---
 
