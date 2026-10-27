@@ -36,6 +36,8 @@ Lightweight web management apps, admin panels, data dashboards, workflow automat
 
 - **Stack / 技术栈:** Next.js, React, TypeScript, Supabase
 
+[Case study / 中英文案例详情](cases/belt-road-study/README.md) — includes verification boundaries / 含上线及数据核验边界。
+
 ---
 
 ### 3. Family Health Management Web Platform | 家庭健康管理Web平台 `PUBLIC CODE`
@@ -57,6 +59,8 @@ Lightweight web management apps, admin panels, data dashboards, workflow automat
 **中文：** 血压监测Web应用。支持血压记录管理、交互式图表展示、电子表格导入导出以实现批量数据操作，以及照片/OCR识别工作流（视配置而定）。
 
 - **Stack / 技术栈:** Next.js, React, TypeScript, PostgreSQL, Supabase
+
+[Case study / 中英文案例详情](cases/bp-monitor/README.md) — no private medical screenshots / 未公开个人健康截图。
 
 ---
 
