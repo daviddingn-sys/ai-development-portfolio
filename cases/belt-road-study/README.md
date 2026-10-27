@@ -16,6 +16,18 @@ EN: An educational information platform bringing together country, university, m
 - SEO, sitemap and structured content / 搜索优化、站点地图与结构化内容
 - Supabase database schema and migration scripts / 数据表结构及迁移脚本
 
+## Real interface captures / 真实运行页面截图
+
+These captures were taken on 27 October 2026 with an isolated Chrome browser from publicly accessible pages. The home, university directory and fee calculator routes each returned HTTP 200. **This is page-availability evidence, not verification of database writes, lead capture, data accuracy or all user flows.**
+
+以下截图于2026年10月27日通过隔离Chrome浏览器采集自公开网页。首页、院校库和费用计算页均返回HTTP 200。**这只证明页面可访问，不代表数据库写入、线索提交、数据准确性及所有流程已通过验收。**
+
+![Live site homepage / 网站首页](homepage-capture.png)
+
+![University directory / 院校查询页](universities-capture.png)
+
+![Cost calculator / 留学费用计算页](cost-calculator-capture.png)
+
 ## Potential reuse / 定制开发参考
 
 EN: Educational directories, searchable information portals, advisory-service websites and lightweight CMS workflows. Client data, source licensing and permissions require independent evaluation.
@@ -24,7 +36,7 @@ EN: Educational directories, searchable information portals, advisory-service we
 
 ## Verification limits / 验证边界
 
-Historical deployment documents report a Vercel-hosted website. A June 2026 audit also recorded Supabase connectivity issues affecting lead database writes and admin retrieval. Current production availability and data accuracy have not been independently revalidated.
+Historical deployment documents report a Vercel-hosted website. A June 2026 audit also recorded Supabase connectivity issues affecting lead database writes and admin retrieval. Public pages were reachable on 27 October 2026, but backend database writes, lead processing and data accuracy have not been revalidated.
 
 历史文档记录过Vercel部署；2026年6月审计同时指出Supabase连接异常影响线索数据库写入与后台查询。当前线上状态及数据准确性尚未独立复验。
 
