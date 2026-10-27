@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Project Inquiry | AI Web & Automation Development</title>
+<meta name="description" content="Request a quote for a lightweight business application, dashboard, education portal or automation.">
+<style>
+:root{color-scheme:light;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:#14243b;background:#f4f7fb}
+*{box-sizing:border-box}body{margin:0}header{background:#14294c;color:white;padding:24px max(24px,calc((100vw - 1000px)/2))}header a{color:#c4e3ff}
+main{width:min(100% - 36px,1000px);margin:34px auto 80px;display:grid;grid-template-columns:1fr 1.1fr;gap:30px}
+h1{font-size:clamp(30px,4vw,44px);line-height:1.1;margin:0 0 20px}h2{font-size:24px;margin:0 0 16px}p{line-height:1.6;color:#58677b}
+ul{padding-left:23px;line-height:2;color:#44566c}.card{background:white;border:1px solid #dce5f0;border-radius:16px;padding:28px;box-shadow:0 6px 28px #14294c0b}
+label{font-weight:650;font-size:14px;display:block;margin:0 0 7px}input,select,textarea{width:100%;padding:12px 13px;font:inherit;border:1px solid #aebed2;border-radius:9px;background:white;color:#182e46}
+input:focus,select:focus,textarea:focus{outline:2px solid #6fa2f4;outline-offset:1px}textarea{min-height:120px;resize:vertical}
+.field{margin-bottom:18px}.muted{font-size:13px;color:#617189}.hp{position:absolute;left:-10000px}button{width:100%;border:0;border-radius:10px;padding:14px 16px;font:inherit;background:#1e56ae;color:white;font-weight:700;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}#result{white-space:pre-line;min-height:25px;font-size:14px;margin-top:12px}#result.ok{color:#11633c}#result.bad{color:#9b2929}
+.small-link{font-size:13px}a{color:#1e56ae}footer{text-align:center;padding:20px;font-size:13px;color:#5c6b7b}
+@media(max-width:760px){main{grid-template-columns:1fr;margin:25px auto;gap:16px}.card{padding:20px}}
+</style></head><body>
+<header><strong>AI-Assisted Web & Automation Development</strong><div><a href="https://github.com/daviddingn-sys/ai-development-portfolio">View portfolio / 查看作品集</a></div></header>
+<main><section><div class="card"><h1>Tell me about your project</h1><h2>描述您的开发需求</h2><p>Custom lightweight web apps, dashboards, education portals and workflow automation.<br>轻量级业务系统、数据看板、教育信息平台及工作流自动化开发。</p>
+<ul><li>Share your goals / 简述业务目标</li><li>Describe must-have functions / 说明核心功能</li><li>Provide your timing and budget / 选择交付时间与预算</li></ul>
+<p class="muted">No GitHub account needed. / 无需 GitHub 账号。</p>
+<p class="muted">This is an inquiry, not an order or a guaranteed quote. / 提交需求不构成正式订单或报价承诺。</p>
+</div></section>
+<section class="card"><h2>Project inquiry / 项目需求</h2>
+<form id="inquiry">
+<div class="field"><label for="name">Your name / 姓名 *</label><input id="name" name="name" required maxlength="80" autocomplete="name"></div>
+<div class="field"><label for="email">Email for reply / 回复邮箱 *</label><input id="email" name="email" type="email" required maxlength="150" autocomplete="email"></div>
+<div class="field"><label for="projectType">Project type / 项目类型 *</label><select id="projectType" name="projectType" required><option value="">Please select / 请选择</option><option>Business web app / 业务管理系统</option><option>Data dashboard / 数据看板</option><option>Education portal / 教育信息平台</option><option>Workflow automation / 工作流自动化</option><option>Other / 其他</option></select></div>
+<div class="field"><label for="description">What do you need? / 需要解决的问题及功能 * </label><textarea id="description" name="description" required minlength="20" maxlength="2500" placeholder="Describe the users, current workflow and expected result / 描述使用对象、现有流程、期望效果"></textarea></div>
+<div class="field"><label for="timeline">Desired timeline / 希望交付时间</label><select id="timeline" name="timeline"><option>Flexible / 可协商</option><option>Within 2 weeks / 两周内</option><option>2–4 weeks / 2–4周</option><option>1–3 months / 1–3个月</option></select></div>
+<div class="field"><label for="budget">Estimated budget / 预算</label><select id="budget" name="budget"><option>To be discussed / 待沟通</option><option>Under USD 500 / 500美元以下</option><option>USD 500–1500</option><option>USD 1500–5000</option><option>USD 5000+</option></select></div>
+<div class="hp"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+<p class="muted">Only share information relevant to your inquiry. Do not submit passwords, medical records, financial account numbers or other sensitive data. Your information is stored privately to respond to this request. / 仅提交咨询所需信息，不要填写密码、健康记录、财务账号等敏感数据。信息仅用于回复您的咨询。</p>
+<button id="submit" type="submit">Send inquiry / 提交需求</button><div id="result" role="status" aria-live="polite"></div>
+</form>
+<p class="small-link">Prefer GitHub? / 也可使用 <a href="https://github.com/daviddingn-sys/ai-development-portfolio/issues/new?template=project-inquiry.yml">GitHub Issues</a>.</p></section></main>
+<footer>Independent AI-assisted software development portfolio · 独立AI辅助软件开发作品集</footer>
+<script>
+const form=document.getElementById('inquiry'),button=document.getElementById('submit'),result=document.getElementById('result');
+form.addEventListener('submit',async e=>{
+e.preventDefault();button.disabled=true;result.className='';result.textContent='Sending / 正在提交…';
+const data=Object.fromEntries(new FormData(form).entries());
+try{const r=await fetch('/api/inquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+const j=await r.json();if(!r.ok||!j.ok)throw new Error(j.error||'Submission failed');
+result.className='ok';result.textContent='Received and saved. Reference / 已接收并保存，编号：'+j.reference;form.reset();}
+catch(err){result.className='bad';result.textContent='Not saved / 未保存：'+(err.message||'Please retry / 请重试');}
+finally{button.disabled=false;}
+});
+</script></body></html>
