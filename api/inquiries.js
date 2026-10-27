@@ -1,4 +1,4 @@
-import { list, get } from '@vercel/blob';
+import { list, get, del } from '@vercel/blob';
 import { timingSafeEqual } from 'node:crypto';
 function equal(a,b) {
  const x=Buffer.from(a || ''), y=Buffer.from(b || '');
@@ -7,11 +7,20 @@ function equal(a,b) {
 export default async function handler(req,res) {
  res.setHeader('Cache-Control','private, no-store');
  res.setHeader('X-Content-Type-Options','nosniff');
- if(req.method!=='GET') return res.status(405).json({error:'Method not allowed'});
+ if(!['GET','DELETE'].includes(req.method)) return res.status(405).json({error:'Method not allowed'});
  const expected=process.env.INQUIRY_ADMIN_SECRET;
  const supplied=(req.headers.authorization || '').replace(/^Bearer /i,'');
  if(!expected || !equal(expected,supplied)) return res.status(401).json({error:'Unauthorized'});
  try{
+   if (req.method === 'DELETE') {
+     const id = typeof req.query?.id === 'string' ? req.query.id : '';
+     if (!/^[0-9a-f-]{36}$/.test(id)) return res.status(400).json({error:'Invalid reference'});
+     const page = await list({prefix:'inquiries/',limit:100});
+     const target = page.blobs.find(item => item.pathname.endsWith('/' + id + '.json'));
+     if (!target) return res.status(404).json({error:'Not found'});
+     await del(target.url);
+     return res.status(200).json({ok:true,removed:id});
+   }
    const page=await list({prefix:'inquiries/',limit:30});
    const entries=[];
    for(const item of page.blobs) {
