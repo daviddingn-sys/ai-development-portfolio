@@ -12,9 +12,9 @@ Lightweight web management apps, admin panels, data dashboards, workflow automat
 
 ### 1. Personal AI Ledger | 个人AI账本 `PRIVATE`
 
-**English:** Personal finance tracking with intelligent automation. Features Cloudflare Workers + D1 multi-currency expense recording, screenshot-assisted entry for faster data capture. Approved anonymized case material prepared for portfolio; not yet public.
+**English:** Personal finance tracking with intelligent automation. Features Cloudflare Workers + D1 multi-currency expense recording, screenshot-assisted entry for faster data capture. Anonymized screenshots and a bilingual technical case study are now available: [View Personal AI Ledger case / 查看AI记账图文案例](cases/personal-ai-ledger/README.md).
 
-**中文：** 个人财务管理工具，结合智能自动化。采用 Cloudflare Workers + D1 实现多币种费用记录，支持截图辅助录入以提升数据录入效率。案例材料已匿名化处理并准备用于作品集，尚未公开。
+**中文：** 个人财务管理工具，结合智能自动化。采用 Cloudflare Workers + D1 实现多币种费用记录，支持截图辅助录入以提升数据录入效率。现已公开[脱敏的8张产品截图及中英文技术案例](cases/personal-ai-ledger/README.md)，原始源码与个人财务数据继续保密。
 
 - **Stack / 技术栈:** Cloudflare Workers + D1
 
