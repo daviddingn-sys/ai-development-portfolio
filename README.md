@@ -6,9 +6,9 @@
 Lightweight management systems · Data dashboards · Information portals · Import/export workflows · Automation  
 轻量级业务管理系统 · 数据看板 · 信息查询平台 · 表格导入导出 · 工作流自动化
 
-**[Discuss a project / 提交开发需求与询价](https://github.com/daviddingn-sys/ai-development-portfolio/issues/new?template=project-inquiry.yml)** · [View detailed case studies / 查看核心案例详情](CASE-STUDIES.md)
+**[Discuss a project / 提交开发需求与询价](https://ai-development-portfolio-eight.vercel.app/)** · [View detailed case studies / 查看核心案例详情](CASE-STUDIES.md)
 
-> GitHub Issues requires a GitHub account. / 通过 GitHub Issues 联系需要登录 GitHub 账号。请勿在公开 Issue 中提供密码、个人记录或机密资料。
+> Anonymous project inquiry requires no GitHub account. Please do not submit passwords, health records or financial account details. / 匿名咨询不需要 GitHub 账号，请勿填写密码、健康记录或财务账号等敏感信息。
 
 ---
 
@@ -84,6 +84,6 @@ Record entry, monthly summaries, charts and data import/export. / 测量录入�
 
 **3. Build and review / 开发与验收** — Review milestones using test data before connecting live systems. / 先用测试数据分阶段验收，再考虑接入正式系统。
 
-### [Start a project discussion / 提交需求与询价](https://github.com/daviddingn-sys/ai-development-portfolio/issues/new?template=project-inquiry.yml)
+### [Start a project discussion / 提交需求与询价](https://ai-development-portfolio-eight.vercel.app/)
 
 **Project evidence and privacy / 案例真实性与隐私：** This portfolio displays personal AI-assisted development work and does not imply paid client deliveries, active demos for every project or production-ready regulated systems. Screenshots are either anonymized application captures, public page captures or clearly labeled synthetic UI previews. Private source, financial records, health records and credentials are not published. / 本作品集展示个人AI辅助开发项目，不声称已完成付费客户交付，也不将所有页面包装成可用在线演示。截图区分脱敏真实应用、公开网页和合成数据预览；不公开私人源码、财务记录、健康信息或密钥。
